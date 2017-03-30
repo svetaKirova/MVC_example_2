@@ -2,7 +2,7 @@
 #    RewriteEngine on
 #    RewriteCond %{REQUEST_FILENAME} !-f
 #    RewriteCond %{REQUEST_FILENAME} !-d
-#    RewriteRule ^(.*) index.php [PT, L]
+#    RewriteRule ^(.*) index.html [PT, L]
 #</IfModule>
 
 RewriteEngine on
