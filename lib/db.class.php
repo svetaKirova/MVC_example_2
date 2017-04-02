@@ -19,20 +19,21 @@ class DB
             return false;
         }
         $result = $this->connection->query($sql);
-        if (mysqli_error($this->connection)){
-           throw new Exception (mysqli_error($this->connection));
+        if (mysqli_error($this->connection)) {
+            throw new Exception (mysqli_error($this->connection));
         }
-        if(is_bool($result)){
+        if (is_bool($result)) {
             return $result;
         }
         $data = array();
-        while ($row = mysqli_fetch_assoc($result)){
+        while ($row = mysqli_fetch_assoc($result)) {
             $data[] = $row;
         }
         return $data;
     }
 
-    public function escape($str){
+    public function escape($str)
+    {
         return mysqli_escape_string($this->connection, $str);
     }
 }

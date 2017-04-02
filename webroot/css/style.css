@@ -1,11 +1,18 @@
 
-body{
+body {
     padding-top: 50px;
 }
-.starter-template{
+
+.starter-template {
     padding: 40px 15px;
 }
-form{
+
+form {
+    width: 400px;
+    max-width: 400px;
+}
+
+.alert {
     width: 400px;
     max-width: 400px;
 }
