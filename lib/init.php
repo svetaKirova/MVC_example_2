@@ -11,14 +11,16 @@ function __autoload($class_name)
         require_once($lib_path);
     } elseif (file_exists($controllers_path)) {
         require_once($controllers_path);
-    } elseif (file_exists($model_path)){
+    } elseif (file_exists($model_path)) {
         require_once($model_path);
     } else {
         // не срабатывает исключение
-       //throw new Exception ('Failed to include class'.$class_name);
+        //throw new Exception ('Failed to include class'.$class_name);
         echo "Failed to include class $class_name";
     }
 }
-function __($key, $default_value = ''){
+
+function __($key, $default_value = '')
+{
     return Lang::get($key, $default_value);
 }
