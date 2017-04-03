@@ -9,7 +9,7 @@ class DB
         $this->connection = new mysqli($host, $user, $password, $db_name);
         if (mysqli_connect_error()) {
             //throw new Exception ('Couldn't connect to DB');
-            echo "Couldn't connect to DB";
+            return "Couldn't connect to DB";
         }
     }
 
@@ -20,7 +20,8 @@ class DB
         }
         $result = $this->connection->query($sql);
         if (mysqli_error($this->connection)) {
-            throw new Exception (mysqli_error($this->connection));
+            // throw new Exception (mysqli_error($this->connection));
+            return "error";
         }
         if (is_bool($result)) {
             return $result;

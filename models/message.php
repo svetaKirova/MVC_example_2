@@ -22,7 +22,7 @@ class Message extends Model
       ";
         } else { // Update existing record
             $sql = "
-        update into messages
+        update messages
         set name = '{$name}',
             email = '{$email}',
             message = '{$message}'
